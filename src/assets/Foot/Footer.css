@@ -1,0 +1,78 @@
+.footer {
+    background-color: #fff;
+    padding: 40px 20px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+  }
+  
+  .brand {
+    color: #ff4d6d;
+    font-size: 34px;
+    font-weight: bold;
+  }
+  
+  
+  .social-icons a {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #555;
+    text-decoration: none;
+  }
+  
+  .social-icons a:hover {
+    color: #ff4d6d;
+  }
+  
+  .footer-section.links a, 
+  .footer-section.policies a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    margin: 5px 0;
+  }
+  
+  .footer-section.links a:hover, 
+  .footer-section.policies a:hover {
+    color: #ff4d6d;
+  }
+  
+  .footer-section.download h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .app-button img {
+    width: 150px;
+    margin: 5px 0;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  .footer-section.download .app-button img {
+    width: 50px; /* Adjust as needed */
+    height: 50; /* Maintain aspect ratio */
+    max-width: 100%;
+    display: block;
+    margin: 5px 0; /* Optional: Adds space between images */
+  }
+  
+  

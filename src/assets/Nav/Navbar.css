@@ -1,0 +1,150 @@
+/* Custom Navbar */
+.custom-navbar {
+    background: linear-gradient(90deg, #0c0518, #332670);
+    padding: 12px 20px;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+  }
+  
+  /* Brand Logo Styling */
+  .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white !important;
+    transition: transform 0.3s ease-in-out;
+    position: absolute;
+    left: 20px;
+  }
+  
+  .navbar-brand:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Navigation Links */
+  .nav-links {
+    display: flex;
+    margin-left: auto;
+    gap: 20px;
+  }
+  
+  .nav-item {
+    color: white !important;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.3s;
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .nav-item::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0%;
+    background: white;
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    bottom: -4px;
+    left: 100%;
+    transform: translateX(-50%);
+  }
+  
+  .nav-item:hover::after {
+    width: 100%;
+  }
+  
+  .nav-item:hover {
+    color: #ffeb3b !important;
+  }
+  
+  /* Profile and Cart Icons */
+  .profile-icon,
+  .cart-icon {
+    font-size: 1.5rem;
+    color: white;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .profile-icon:hover,
+  .cart-icon:hover {
+    transform: scale(1.2);
+    color: #ffeb3b;
+  }
+  
+  /* Search Box */
+  .search-box {
+    position: relative;
+    width: 300px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    padding: 2px;
+  }
+  
+  /* Search Input */
+  .search-input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 10px 10px 10px 15px; /* Ensures spacing for icon */
+    font-size: 1rem;
+    background: transparent;
+    border-radius: 25px;
+  }
+  
+  /* Focus Effect */
+  .search-input:focus {
+    box-shadow: 0px 0px 0px rgba(96, 86, 228, 0.3);
+  }
+  
+  /* Search Icon Inside the Search Box */
+  .search-icon {
+    position: absolute;
+    right: 15px; /* Correct placement inside */
+    font-size: 20px;
+    color: #6056e4;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  /* Icon Hover Effect */
+  .search-icon:hover {
+    color: #ff5722;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .search-box {
+      width: 100%;
+      max-width: 250px;
+    }
+  }
+  
+  /* Dark Mode */
+  body.dark-mode {
+    background-color: #121212;
+    color: white;
+  }
+  
+  .custom-navbar.dark-mode {
+    background-color: #333;
+  }
+  
+  .custom-navbar .nav-item.text-white {
+    color: white;
+  }
+  
+  .custom-navbar .nav-item.text-white:hover {
+    color: #f1f1f1;
+  }
+  
+  

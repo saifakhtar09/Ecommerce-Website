@@ -1,0 +1,671 @@
+/* ===========================
+   1. General Container Styles
+   =========================== */
+   .about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* ===========================
+     2. Typography & Branding
+     =========================== */
+  .brand-name {
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .team-member h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
+  p {
+    color: #555;
+  } /* Removed duplicate color styling for team-member p and contact-section p */
+  
+  /* ===========================
+     3. Section Layout & Animation
+     =========================== */
+  .mission-section,
+  .team-section,
+  .contact-section,
+  .social-media-section {
+    margin-top: 30px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+  
+  .mission-section { animation-delay: 0.3s; }
+  .team-section { animation-delay: 0.6s; }
+  .contact-section { animation-delay: 0.9s; }
+  .social-media-section { animation-delay: 1.2s; }
+  
+  /* ===========================
+     4. Team Member Styles
+     =========================== */
+  .team-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: slideIn 1s forwards;
+  }
+  
+  .team-member img {
+    border-radius: 50%;
+    margin-right: 15px;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+  
+  .team-member:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* ===========================
+     5. Social Media Icons
+     =========================== */
+  .social-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .social-icon {
+    font-size: 24px;
+    color: #555;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    color: #007bff;
+    transform: scale(1.2);
+  }
+  
+  /* ===========================
+     6. Animations
+     =========================== */
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /*------------------------------------------------------*/
+
+  /* ===========================
+   1. Cart Container & Layout
+   =========================== */
+   .container {
+    max-width: 800px;
+  }
+  
+  /* ===========================
+     2. Typography & Headings
+     =========================== */
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  h3, h4 {
+    font-weight: bold;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  h4 {
+    font-size: 1.2rem;
+    color: #28a745;
+  }
+  
+  /* ===========================
+     3. Empty Cart Styling
+     =========================== */
+  .empty-cart img {
+    width: 250px;
+  }
+  
+  .empty-cart p {
+    color: #777;
+    font-size: 1.1rem;
+    margin-top: 15px;
+  }
+  
+  /* ===========================
+     4. Cart Items Styling
+     =========================== */
+  .cart-container {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart-item {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .cart-item p {
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  /* ===========================
+     5. Buttons & Controls
+     =========================== */
+  .cart-controls button {
+    margin: 0 5px;
+  }
+  
+  .remove-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .remove-btn:hover {
+    background-color: #c82333;
+  }
+  
+  button.btn-success {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button.btn-success:hover {
+    background-color: #218838;
+  }
+  
+  /* ===========================
+     6. Responsive Design
+     =========================== */
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 15px;
+    }
+  
+    h2 {
+      font-size: 1.6rem;
+    }
+  
+    .cart-item {
+      font-size: 1rem;
+      padding: 12px;
+    }
+  
+    .remove-btn {
+      font-size: 0.85rem;
+    }
+  
+    .cart-controls button {
+      padding: 5px 8px;
+    }
+  
+    h3, h4 {
+      font-size: 1.3rem;
+    }
+  
+    button.btn-success {
+      font-size: 1rem;
+    }
+  }
+
+  /*------------------------------------------------------*/
+
+  /* Container Styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Item Grid */
+  .item-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Item Card */
+  .item-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .item-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .item-image:hover {
+    transform: scale(1.1);
+  }
+  
+  h2 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #28a745;
+  }
+  
+  /* Buttons */
+  /* Buttons - Fixed Alignment & Uniform Size */
+button {
+    width: 100%; /* Ensures full width within the card */
+    padding: 10px; /* Consistent padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+    margin-top: 8px;
+  }
+  
+  /* Wishlist & Add to Cart button styling */
+  .btn-outline-danger, .btn-primary {
+    width: 100%; /* Both buttons now have the same width */
+  }
+  
+  .btn-primary {
+    background: #007bff;
+    color: #fff;
+  }
+  
+  .btn-primary:hover {
+    background: #0056b3;
+  }
+  
+  .btn-success {
+    background: #28a745;
+    color: #fff;
+  }
+  
+  .btn-success:hover {
+    background: #218838;
+  }
+  
+  .btn-warning {
+    background: #ffc107;
+    color: #212529;
+  }
+  
+  .btn-warning:hover {
+    background: #e0a800;
+  }
+  
+  .btn-outline-danger {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: 2px solid #dc3545;
+    color: #dc3545;
+  }
+  
+  .btn-outline-danger:hover {
+    background: #dc3545;
+    color: #fff;
+  }
+  
+  /* Item Grid - Fixed to 6 Items Per Row */
+  .item-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(150px, 1fr)); /* 6 equal columns with a minimum size */
+    gap: 15px;
+    justify-content: center;
+    align-items: start;
+  }
+  
+  /* Item Card - Reduced Size & Fixed Alignment */
+  .item-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+  
+  .item-image {
+    width: 100px; /* Reduced image size */
+    height: 100px; /* Ensure uniform size */
+    object-fit: contain;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .item-image:hover {
+    transform: scale(1.1);
+  }
+  
+  h2 {
+    font-size: 1rem;
+    color: #333;
+    margin: 8px 0;
+  }
+  
+  .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #28a745;
+  }
+  
+  /* Responsive - Adjust for Smaller Screens */
+  @media (max-width: 1200px) {
+    .item-grid {
+      grid-template-columns: repeat(4, minmax(150px, 1fr)); /* 4 items per row */
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .item-grid {
+      grid-template-columns: repeat(3, minmax(150px, 1fr)); /* 3 items per row */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .item-grid {
+      grid-template-columns: repeat(2, minmax(120px, 1fr)); /* 2 items per row */
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .item-grid {
+      grid-template-columns: repeat(1, minmax(100px, 1fr)); /* 1 item per row */
+    }
+  }
+
+  /* ===========================*/
+
+  
+/* ===========================
+   1. Category Section
+   =========================== */
+   .category-container {
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+  }
+  
+  /* ===========================
+     2. Category Wrapper
+     =========================== */
+  .category-wrapper {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    padding: 10px 0;
+  }
+  
+  /* ===========================
+     3. Category Item
+     =========================== */
+  .category-item {
+    text-decoration: none;
+    color: #343a40;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px;
+    min-width: 80px;
+    text-align: center;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  /* ===========================
+     4. Category Icon
+     =========================== */
+  .category-icon {
+    font-size: 24px;
+    color: #343a40;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* ===========================
+     5. Category Icon SVG
+     =========================== */
+  .category-icon svg {
+    width: 30px;
+    height: 30px;
+    display: block;
+  }
+  
+  /* ===========================
+     6. Category Name
+     =========================== */
+  .category-name {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  /* ===========================
+     7. Hover Effects
+     =========================== */
+  .category-item:hover .category-icon {
+    color: #007bff;
+  }
+
+  /*--------------------------------------------*/
+  .wishlist-container {
+    max-width: 100%;
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .wishlist-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .empty-message {
+    font-size: 18px;
+    color: #777;
+  }
+  
+  .wishlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  .wishlist-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    background: #fff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .wishlist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .wishlist-image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+  
+  .price {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #000;
+  }
+  
+  .wishlist-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .wishlist-actions .btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    width: 100%; /* Make buttons full width */
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .btn-primary {
+    background-color: #28a745; /* Green for Move to Cart */
+    color: white;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+  }
+  
+  .btn-primary:hover {
+    background-color: #218838; /* Darker green for hover */
+    transform: scale(1.05);
+  }
+  
+  .wishlist-actions .btn:active {
+    transform: scale(0.98); /* Subtle click effect */
+  }
+  
+  .continue-btn {
+    transition: transform 0.2s ease, opacity 0.3s ease;
+  }
+  
+  .bounce-zoom {
+    animation: bounceZoom 0.4s ease-in-out forwards;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 600px) {
+    .wishlist-container {
+      width: 90%; /* Full width on mobile */
+    }
+  
+    .wishlist-grid {
+      grid-template-columns: 1fr; /* Single column on small screens */
+    }
+  
+    .wishlist-card {
+      padding: 10px; /* Reduce padding on mobile */
+    }
+  
+    .wishlist-actions .btn {
+      width: auto; /* Auto width on mobile for buttons */
+    }
+  }
+  
+  /* 🎉 Bounce & Zoom Out Animation */
+  @keyframes bounceZoom {
+    0% { transform: scale(1); opacity: 1; }
+    30% { transform: scale(1.1); } /* Slight bounce */
+    60% { transform: scale(0.9); } /* Bounce back */
+    100% { transform: scale(0); opacity: 0; } /* Zoom out and fade */
+  }
+  
+  /*--------------------------------------------------------------*/
+
+  
+    /*----------------------------------------*/
+    /* Dark Mode Button */
+/* Dark Mode Toggle Button - No Background */
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 18px;
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+/* Moon Icon - Silver Color */
+.moon-icon {
+    color: #facc15; /* Set silver color */
+}
+
+/* Sun Icon - Yellowish Color */
+.sun-icon {
+    color: #facc15; /* Light yellow color */
+}
+
+/* Hover Effect */
+.dark-mode-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Align Dark Mode Toggle in Navbar */
+.navbar .dark-mode-toggle {
+    margin-left: 10px; /* Adjust spacing */
+    display: flex;
+    align-items: center;
+}
